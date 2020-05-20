@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="请输入要监听的号码"
+        android:inputType="phone"
+        tools:ignore="Autofill,HardcodedText"/>
+
+    <EditText
+        android:id="@+id/edtKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="请输入要监听的短信内容关键字"
+        android:inputType="text"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <RadioButton
+            android:id="@+id/rbPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅根据电话号码进行监听"
+            android:checked="true"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/rbContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅根据短信内容关键字进行监听"
+            tools:ignore="HardcodedText"/>
+        <RadioButton
+            android:id="@+id/rbPhoneAndContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="根据电话号码和短信内容关键字同时判断进行监听"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始监听"
+        android:layout_marginTop="20dp"
+        android:onClick="startListen"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
